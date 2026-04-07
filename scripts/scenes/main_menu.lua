@@ -12,9 +12,9 @@ main_menu_scene=scene:extend({
  end,
 
 	draw=function()
+		entity:each("draw")
 		for e in all(entity)do
 		 print(e)
-	end
-		entity:each("draw")
+	 end
 	end
 })

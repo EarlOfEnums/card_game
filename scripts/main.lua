@@ -20,4 +20,7 @@ end
 function _draw()
  cls()
  scene.current:draw()
+ for e in all(scene.current)do
+  print(e)
+ end
 end
