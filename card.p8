@@ -6,7 +6,7 @@ __lua__
 #include scripts/helpers/log.lua
 #include scripts/helpers/animation.lua
 #include scripts/helpers/text.lua
-#include scripts/helpers/numbers.lua
+#include scripts/helpers/array.lua
 #include scripts/entities/entity.lua
 #include scripts/entities/ui.lua
 #include scripts/entities/menu.lua

@@ -5,7 +5,7 @@ menu_item=entity:extend({
  color=7,
 
  init=function(_ENV)
-  entity:init(_ENV)
+  entity.init(_ENV)
   index=index or 1
   label=label or ""
   callback=callback or noop

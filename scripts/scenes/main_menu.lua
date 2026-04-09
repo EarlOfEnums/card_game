@@ -10,15 +10,14 @@ main_menu_scene=scene:extend({
 				menu_item({index=3,label="collection",callback=function()scene:load(collection_scene)end})
 			}
 		})
-		log_table(pool)
 		log_table(menu)
 	end,
 
 	update=function(_ENV)
-		menu:each("update")
+		menu:update()
  end,
 
 	draw=function(_ENV)
-		menu:each("draw")
+		menu:draw()
 	end
 })
