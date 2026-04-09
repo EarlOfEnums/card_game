@@ -1,19 +1,18 @@
-menui=ui:extend({
+menu_item=entity:extend({
  index=1,
  label="",
  callback=noop,
  color=7,
 
- new=function(_ENV,index,label,callback,color)
-  tbl=ui:new()
-  tbl.index=0 or index
-  tbl.label="" or label
-  tbl.callback=noop or callback
-  tbl.clr=7 or color
-  return tbl
+ init=function(_ENV)
+  entity:init(_ENV)
+  index=index or 1
+  label=label or ""
+  callback=callback or noop
+  clr=clr or 7
  end,
 
- draw=function(_ENV,x,y)
+ draw=function(_ENV)
   print(label,x,y,clr)
  end
 })

@@ -2,8 +2,10 @@ global=_ENV
 noop=function()end
 
 function _init()
+ logging=true
+ if(logging)printh("new log","log",true)
  routines={}
- scene:load(main_menu_scene)
+	scene:load(main_menu_scene)
 end
 
 function _update()
@@ -20,7 +22,4 @@ end
 function _draw()
  cls()
  scene.current:draw()
- for e in all(scene.current)do
-  print(e)
- end
 end

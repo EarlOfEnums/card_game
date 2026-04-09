@@ -1,7 +1,7 @@
 scene=class:extend({
- current=nil,
+	current=nil,
 
- update=noop,
+	update=noop,
 	draw=noop,
 
 	destroy=function(_ENV)
@@ -9,8 +9,8 @@ scene=class:extend({
 	end,
 
 	load=function(_ENV,scn)
-		if(current!=scn)do
-			if(current)current:destroy()
+		if current != scn then
+			if (current) current:destroy()
 			current=scn()
 		end
 	end

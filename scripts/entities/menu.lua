@@ -1,19 +1,22 @@
-menu=ui:extend({
- menui={},
+menu=entity:extend({
+ menui=nil,
  selected=1,
  no_input=false,
 
-
- new=function(_ENV,x,y,menu_items,selected)
-  tbl=ui:new()
-  tbl.menui={} or menu_items
-  tbl.selected=1 or selected
-  tbl.x=0 or x
-  tbl.y=0 or y
-  return tbl
+ init=function(_ENV)
+  entity:init(_ENV)
+  menui=menui or {}
+  selected=selected or 1
+  x=x or 0
+  y=y or 0
  end,
 
  update=function(_ENV)
+  table.sort(menui,function(a,b)return a.index<b.index end)
+  for i=1,#menui do
+   menui[i].x=x
+   menui[i].y=y+(i*8)-8
+  end
   if(not btn(4) and not btn(5))do
    no_input=true
   end
@@ -31,8 +34,6 @@ menu=ui:extend({
  end,
 
  draw=function(_ENV)
-  local y=0 or y
-  table.sort(menui,function(a,b)return a.index<b.index end)
   for item in all(menui)do
    if(item.index==selected)do
     spr(0,x-4,y)

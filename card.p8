@@ -3,6 +3,7 @@ version 43
 __lua__
 #include scripts/main.lua
 #include scripts/class.lua
+#include scripts/helpers/log.lua
 #include scripts/helpers/animation.lua
 #include scripts/helpers/text.lua
 #include scripts/helpers/numbers.lua
@@ -15,6 +16,7 @@ __lua__
 #include scripts/scenes/scene.lua
 #include scripts/scenes/splash.lua
 #include scripts/scenes/main_menu.lua
+#include scripts/scenes/title.lua
 
 __gfx__
 70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
