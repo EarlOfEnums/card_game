@@ -1,5 +1,7 @@
 -- print centered
 function printc(str,y,clr)
+	y=y or 61
+	clr=clr or 7
 	local x=64-(#str*4)/2
 	print(str,x,y,clr)
 end

@@ -1,11 +1,13 @@
 global=_ENV
 noop=function()end
+poke(0X5F2E,1)
+pal({[0]=0,129,140},1)
 
 function _init()
  logging=true
  if(logging)printh("new log","log",true)
  routines={}
-	scene:load(main_menu_scene)
+	scene:load(splash_scene)
 end
 
 function _update()
