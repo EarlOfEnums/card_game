@@ -1,10 +1,6 @@
 sprite=entity:extend({
  t=nil,
  sprite_id=0,
- x=0,
- y=0,
- h=8,
- w=8,
  flip_h=false,
  flip_v=false,
  draw=function(_ENV)

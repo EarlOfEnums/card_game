@@ -1,14 +1,7 @@
 splash_scene=scene:extend({
-	-- crown=sprite({
-	-- 	t=0,
-	-- 	sprite_id=4,
-	-- 	x=40,
-	-- 	h=26,
-	-- 	w=48
-	-- }),
 	crown=sprite({
 		t=0,
-		sprite_id=64,
+		sprite_id=6,
 		y=-15,
 		x=56,
 		h=9,
@@ -16,7 +9,7 @@ splash_scene=scene:extend({
 	}),
 	left_bracket=sprite({
 		t=0,
-		sprite_id=11,
+		sprite_id=4,
 		x=-12,
 		y=49,
 		h=30,
@@ -25,7 +18,7 @@ splash_scene=scene:extend({
 	}),
 	right_bracket=sprite({
 		t=0,
-		sprite_id=11,
+		sprite_id=4,
 		x=128,
 		y=49,
 		h=30,
@@ -59,6 +52,9 @@ splash_scene=scene:extend({
 		end
 		if frame == 25 do
 			animate(crown,"y",40,40)
+		end
+		if frame >= 150 do
+			scene:load(main_menu_scene)
 		end
 		if btnp(❎) then
 			scene:load(main_menu_scene)
